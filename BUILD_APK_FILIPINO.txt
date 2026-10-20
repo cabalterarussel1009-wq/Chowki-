@@ -1,0 +1,20 @@
+PAANO I-BUILD ANG CHOWKI APK
+
+Ang ZIP na ito ay Android Studio project, hindi pa compiled APK.
+May GitHub Actions workflow na para awtomatikong i-build ang APK.
+
+1. I-extract ang CHOWKI_Android_App folder.
+2. Gumawa o mag-login sa GitHub account.
+3. Gumawa ng bagong repository, halimbawa: chowki-android-app.
+4. I-upload ang LAHAT ng laman ng CHOWKI_Android_App folder sa repository root (kasama ang .github folder; maaaring kailangang i-enable ang hidden files).
+5. Pumunta sa repository > Actions > Build CHOWKI APK > Run workflow.
+6. Hintaying maging green/successful ang workflow.
+7. Buksan ang successful run, hanapin ang Artifacts at i-download ang chowki-debug-apk.
+8. I-extract ang downloaded artifact ZIP. Nasa loob ang app-debug.apk.
+9. I-download ang APK sa Android phone at i-install. Maaaring hingin ng Android ang pahintulot na mag-install mula sa source na iyon.
+
+NOTES
+- Debug APK ito para sa testing/sideload, hindi Play Store release build.
+- Kailangan ng internet ang app para ma-load ang https://chowki.netlify.app/.
+- Background audio ay naka-loop habang nasa app foreground ito at naka-pause kapag lumabas/background ang app.
+- Ang bagong Foodpanda-style native category/product UI ay hindi pa ginawa sa source na ito; kasalukuyang wrapper ng existing website na may intro banner, loading logo at looping audio.

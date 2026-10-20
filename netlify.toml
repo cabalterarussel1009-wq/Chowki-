@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[build.environment]
+  # SUPABASE_URL is a public project endpoint used by browser-side Supabase clients.
+  # Exclude this non-secret value from Netlify's secret scanner; keep the service-role key secret.
+  SECRETS_SCAN_OMIT_KEYS = "SUPABASE_URL"
